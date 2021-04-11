@@ -57,11 +57,7 @@ class Boat:
         all_busy_coords = []
         print("Введите расположение Ваших кораблей на поле. \n"
               "Для ориентации используйте '0' для горизонтального расположения и '1' для вертикального")
-        # field = Field()
-        # field.create_field(all_boats_coords)
-        # field.print_pl_field()
-        # self.field = Field.create_field(self, all_boats_coords)    #для печати поля
-        # field = Field()
+
         size = ['трехпалубного'] + ['двухпалубного'] * 2 + ['однопалубного'] * 4
         size_num = [3, 2, 2, 1, 1, 1, 1]
         should_restart = True
@@ -221,7 +217,6 @@ class Side:
                         print("Промах. Ход уходит AI")
                         print("__________________________")
                         break
-                        # ПРОМАХ, ЗАВЕРШИТЬ
                     elif enemy_field[y][x] == "■":
                         enemy_field[y][x] = "X"
                         if any(['■' in row for row in enemy_field]):
@@ -265,7 +260,6 @@ class Side:
                     return "finish"
 
             elif enemy_field[y][x] == "X" or enemy_field[y][x] == "T":
-                # print("В клетку уже был сделан выстрел")
                 continue
             else:
                 print("неожиданное завершение")
